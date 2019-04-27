@@ -11,145 +11,51 @@
 					<div class="widget user-dashboard-profile">
 						<!-- User Image -->
 						<div class="profile-thumb">
-							<img src="res/images/user/user-thumb.jpg" alt="" class="rounded-circle">
+							<img src="res/images/user/<?= $inv->PictureName ?>" alt="" class="rounded-circle">
 						</div>
+
 						<!-- User Name -->
-						<h5 class="text-center">Samanta Doe</h5>
-						<p>Joined February 06, 2017</p>
+						<h5 class="text-center"><?= $person->Name ?></h5>
+						<p><?= date("Y") - date("Y", strtotime($person->DateofBirth)) ?> years old</p>
 						<a href="#" class="btn btn-main-sm">Edit Profile</a>
 					</div>
 
 					<!-- Dashboard Links -->
 					<div class="widget user-dashboard-menu">
-						<p>TODO add the use description</p>
+						<p><?= $person->Description ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
 				<!-- Recently Favorited -->
 				<div class="widget dashboard-container my-invitations">
-					<h3 class="widget-header">My invitations</h3>
+					<h2 class="widget-header">My invitations</h2>
 					<table class="table table-responsive product-dashboard-table">
 						<tbody>
-							<tr>
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="res/images/products/products-1.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Macbook Pro 15inch</h3>
-									<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-									<span class="status active"><strong>Status</strong>Active</span>
-									<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
-								</td>
-								<td class="product-category"><span class="categories">Laptops</span></td>
-								<td class="action" data-title="Action">
-									<div class="">
+							<?php foreach($invitations as $inv) { ?>
+								<tr>
+									<td class="product-thumb">
+										<img width="80px" height="auto" src="res/images/products/<?= $inv->PictureName ?>" alt="image description">
+									</td>
+									<td class="product-details">
+										<li class="list-inline-item">
+											<a href="index.php?page=invitations&cat=<?= $inv->Category1 ?>">#<?= $inv->Category1 ?></a> &nbsp;&nbsp;
+											<a href="index.php?page=invitations&cat=<?= $inv->Category2 ?>">#<?= $inv->Category2 ?></a> &nbsp;&nbsp;
+											<a href="index.php?page=invitations&cat=<?= $inv->Category3 ?>">#<?= $inv->Category3 ?></a>
+										</li>										
+										<p class="pr-5"><?= $inv->Description ?></p>
+									</td>
+									<td class="action" data-title="Action">
 										<ul class="list-inline justify-content-center">
 											<li class="list-inline-item">
-												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
+												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="index.php?page=connect&id=<?= $inv->ID ?>">
 													<i class="fa fa-eye"></i>
 												</a>
 											</li>
 										</ul>
-									</div>
-								</td>
-							</tr>
-							<tr>
-
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="res/images/products/products-2.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Study Table Combo</h3>
-									<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Posted on: </strong><time>Feb 12, 2017</time> </span>
-									<span class="status active"><strong>Status</strong>Active</span>
-									<span class="location"><strong>Location</strong>USA</span>
-								</td>
-								<td class="product-category"><span class="categories">Laptops</span></td>
-								<td class="action" data-title="Action">
-									<div class="">
-										<ul class="list-inline justify-content-center">
-											<li class="list-inline-item">
-												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
-													<i class="fa fa-eye"></i>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-							<tr>
-
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="res/images/products/products-3.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Macbook Pro 15inch</h3>
-									<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-									<span class="status active"><strong>Status</strong>Active</span>
-									<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
-								</td>
-								<td class="product-category"><span class="categories">Laptops</span></td>
-								<td class="action" data-title="Action">
-									<div class="">
-										<ul class="list-inline justify-content-center">
-											<li class="list-inline-item">
-												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
-													<i class="fa fa-eye"></i>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-							<tr>
-
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="res/images/products/products-4.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Macbook Pro 15inch</h3>
-									<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-									<span class="status active"><strong>Status</strong>Active</span>
-									<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
-								</td>
-								<td class="product-category"><span class="categories">Laptops</span></td>
-								<td class="action" data-title="Action">
-									<div class="">
-										<ul class="list-inline justify-content-center">
-											<li class="list-inline-item">
-												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
-													<i class="fa fa-eye"></i>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-							<tr>
-
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="res/images/products/products-1.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Macbook Pro 15inch</h3>
-									<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-									<span class="status active"><strong>Status</strong>Active</span>
-									<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
-								</td>
-								<td class="product-category"><span class="categories">Laptops</span></td>
-								<td class="action" data-title="Action">
-									<div class="">
-										<ul class="list-inline justify-content-center">
-											<li class="list-inline-item">
-												<a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
-													<i class="fa fa-eye"></i>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
+									</td>
+								</tr>
+							<?php } ?>
 						</tbody>
 					</table>
 				</div>

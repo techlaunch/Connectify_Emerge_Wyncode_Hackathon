@@ -36,7 +36,7 @@
 						<div class="row p-lg-3 p-sm-5 p-4">
 							<div class="col-lg-4 align-self-center">
 								<a href="single.html">
-									<img src="res/images/products/products-1.jpg" class="img-fluid" alt="">
+									<img src="res/images/products/<?= $inv->PictureName ?>" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="col-lg-8">

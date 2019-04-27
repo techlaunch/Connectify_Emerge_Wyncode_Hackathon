@@ -1,5 +1,8 @@
 <?php
 
+// include classes
+include_once "model/general.php";
+
 class Profile
 {
 	public function index() {
@@ -9,6 +12,7 @@ class Profile
 		// call the model functions
 		$generalModel = new General();
 		$person = $generalModel->getPersonByID($id);
+		$invitations = $generalModel->getInvitationsByUserId($id);
 
 		// include the view
 		$title = "Profile";

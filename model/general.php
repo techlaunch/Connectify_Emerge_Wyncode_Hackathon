@@ -55,8 +55,45 @@ class General
 		global $db;
 
 		$person = $db->query("SELECT * FROM person WHERE id=$id");
-		return $person;
+		return $person[0];
 	}
+
+	/**
+	 * Search for invitations based on a user
+	 */
+	public function getInvitationsByUserId($id) {
+		global $db;
+
+		$invitations = $db->query("SELECT * FROM invites WHERE PersonID = $id");
+		return $invitations;
+	}
+
+	/**
+	 * Search for invitations by Id
+	 */
+	public function getInvitationById($id) {
+		global $db;
+
+		$invitations = $db->query("
+			SELECT A.*, B.Name 
+			FROM invites A
+			JOIN person B
+			ON A.PersonID = B.id
+			WHERE A.id = $id");
+
+		return $invitations[0];
+	}
+
+	/**
+	 * Search for invitations based on a user
+	 */
+	public function getConnectById($id) {
+		global $db;
+
+		$invitations = $db->query("SELECT * FROM invites WHERE PersonID = $id");
+		return $invitations;
+	}
+
 
 	// /**
 	//  * Get the list of Heat players

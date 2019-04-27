@@ -7,186 +7,25 @@
 				<div class="section-title">
 					<h2>All Categories</h2>
 				</div>
-				<!-- First Letter -->
-				<div class="block">
-					<!-- Store First Letter -->
-					<h5 class="store-letter">#</h5>
-					<hr>
-					<!-- Store Lists -->
-					<div class="row">
-						<!-- Store List 01 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 02 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 03 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 04 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
+
+				<?php foreach ($categories as $key => $val) { ?>
+					<div class="block">
+						<!-- First Letter -->
+						<h5 class="store-letter"><?= $key ?></h5>
+						<hr>
+
+						<!-- Lists -->
+						<div class="row">
+							<?php foreach ($val as $cat) { ?>
+							<div class="col-md-3 col-sm-6">
+								<ul class="store-list">
+									<li><a href="index.php?page=invitations&cat=<?= $cat[0] ?>"><?= $cat[0] ?></a></li>
+								</ul>	
+							</div>
+							<?php } ?>
 						</div>
 					</div>
-				</div>
-				<!-- Second Letter -->
-				<div class="block">
-					<!-- Store First Letter -->
-					<h5 class="store-letter">A</h5>
-					<hr>
-					<!-- Store Lists -->
-					<div class="row">
-						<!-- Store List 01 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 02 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 03 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 04 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-					</div>
-				</div>
-				<!-- Third Letter -->
-				<div class="block">
-					<!-- Store First Letter -->
-					<h5 class="store-letter">B</h5>
-					<hr>
-					<!-- Store Lists -->
-					<div class="row">
-						<!-- Store List 01 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 02 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 03 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 04 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-					</div>
-				</div>
-				<!-- Fourth Letter -->
-				<div class="block">
-					<!-- Store First Letter -->
-					<h5 class="store-letter">C</h5>
-					<hr>
-					<!-- Store Lists -->
-					<div class="row">
-						<!-- Store List 01 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 02 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 03 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-						<!-- Store List 04 -->
-						<div class="col-md-3 col-sm-6">
-							<ul class="store-list">
-								<li><a href="#">1 - 800 - Got - Junk?</a></li>
-								<li><a href="#">1000 bulbs.com</a></li>
-								<li><a href="#">180 packrat.com</a></li>
-								<li><a href="#">3 day blinds</a></li>
-							</ul>	
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

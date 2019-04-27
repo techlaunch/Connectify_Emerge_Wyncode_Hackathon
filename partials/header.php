@@ -9,17 +9,10 @@
 
 	<!-- FAVICON -->
 	<link href="res/images/favicon.png" rel="shortcut icon">
-	<!-- PLUGINS CSS STYLE -->
-	<!-- <link href="res/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"> -->
-	<!-- Bootstrap -->
 	<link rel="stylesheet" href="res/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="res/plugins/bootstrap/css/bootstrap-slider.css">
 	<!-- Font Awesome -->
 	<link href="res/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Owl Carousel -->
-<!-- 	<link href="res/plugins/slick-carousel/slick/slick.css" rel="stylesheet">
-	<link href="res/plugins/slick-carousel/slick/slick-theme.css" rel="stylesheet"> -->
-	<!-- Fancy Box -->
 	<link href="res/plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
 	<link href="res/plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<!-- CUSTOM CSS -->
@@ -33,7 +26,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg navbar-light navigation">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="index.php?page=invitations">
 						<img src="res/images/logo.png" alt="">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

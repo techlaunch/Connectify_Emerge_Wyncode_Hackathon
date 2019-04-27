@@ -35,17 +35,9 @@
 			</div>
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
 				<!-- Recently Favorited -->
-				<div class="widget dashboard-container my-adslist">
+				<div class="widget dashboard-container my-invitations">
 					<h3 class="widget-header">My invitations</h3>
 					<table class="table table-responsive product-dashboard-table">
-						<thead>
-							<tr>
-								<th>Image</th>
-								<th>Product Title</th>
-								<th class="text-center">Category</th>
-								<th class="text-center">Action</th>
-							</tr>
-						</thead>
 						<tbody>
 							<tr>
 								<td class="product-thumb">

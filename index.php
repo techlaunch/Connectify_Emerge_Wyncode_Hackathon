@@ -1,10 +1,5 @@
 <?php
 
-// capture all errors
-set_error_handler(function($number, $string, $file, $line) {
-	throw new Exception($string);
-}, E_ALL);
-
 // get page and action from the url
 $page = isset($_GET['page']) ? $_GET['page'] : "login";
 $action = isset($_GET['action']) ? $_GET['action'] : "index";

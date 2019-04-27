@@ -3,17 +3,23 @@
 // include classes
 include_once "model/general.php";
 
-class Invitations 
+class Invitations
 {
 	public function index() {
+		// get category
+		$category = isset($_GET['cat']) ? $_GET['cat'] : '%';
+
 		// include the model
 		$generalModel = new General();
 
 		// get top categories
 		$categories = $generalModel->getTopCategories();
 
+		// get invitations by category
+		$invitations = $generalModel->getInvitationByCategory($category);
+
 		// include the view
-		$title = "Contest";
+		$title = "Invitations";
 		include "view/invitations.php";
 	}
 

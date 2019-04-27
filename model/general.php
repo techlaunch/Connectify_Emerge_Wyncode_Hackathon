@@ -29,6 +29,26 @@ class General
 		return $initials;
 	}
 
+	/**
+	 * Search for invitations based on a category
+	 */
+	public function getInvitationByCategory($category) {
+		global $db;
+
+		$invitations = $db->query("
+			SELECT A.*, B.Name 
+			FROM invites A
+			JOIN person B
+			ON A.PersonID = B.id
+			WHERE A.Category1 LIKE '$category' 
+			OR A.Category2 LIKE '$category' 
+			OR A.Category3 LIKE '$category'
+			LIMIT 10");
+
+		return $invitations;
+	}
+
+
 	// /**
 	//  * Get the list of Heat players
 	//  */

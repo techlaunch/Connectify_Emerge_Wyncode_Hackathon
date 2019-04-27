@@ -11,7 +11,7 @@
 					<div class="widget user-dashboard-profile">
 						<!-- User Image -->
 						<div class="profile-thumb">
-							<img src="res/images/user/<?= $inv->PictureName ?>" alt="" class="rounded-circle">
+							<img src="res/images/user/<?= $person->PictureName ?>" alt="" class="rounded-circle">
 						</div>
 
 						<!-- User Name -->
@@ -29,7 +29,7 @@
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
 				<!-- Recently Favorited -->
 				<div class="widget dashboard-container my-invitations">
-					<h2 class="widget-header">My invitations</h2>
+					<h2 class="widget-header" style="border-bottom:0px; margin:0px;">My invitations</h2>
 					<table class="table table-responsive product-dashboard-table">
 						<tbody>
 							<?php foreach($invitations as $inv) { ?>
@@ -43,7 +43,7 @@
 											<a href="index.php?page=invitations&cat=<?= $inv->Category2 ?>">#<?= $inv->Category2 ?></a> &nbsp;&nbsp;
 											<a href="index.php?page=invitations&cat=<?= $inv->Category3 ?>">#<?= $inv->Category3 ?></a>
 										</li>										
-										<p class="pr-5"><?= $inv->Description ?></p>
+										<p class="pr-5"><?= substr($inv->Description, 0, 100) . "..." ?></p>
 									</td>
 									<td class="action" data-title="Action">
 										<ul class="list-inline justify-content-center">

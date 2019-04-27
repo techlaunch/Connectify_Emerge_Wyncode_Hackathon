@@ -35,13 +35,15 @@
 					<div class="ad-listing-list mt-20">
 						<div class="row p-lg-3 p-sm-5 p-4">
 							<div class="col-lg-4 align-self-center">
-								<a href="single.html">
+								<a href="index.php?page=connect&id=<?= $inv->ID ?>">
 									<img src="res/images/products/<?= $inv->PictureName ?>" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="col-lg-8">
 								<div class="row">
 									<div class="col-lg-12 col-md-10">
+										<a style="float:right;" href="index.php?page=connect&id=<?= $inv->ID ?>"><i class="fa fa-eye"></i></a>
+				
 										<div class="ad-listing-content">
 											<ul class="list-inline mt-2 mb-3">
 												<li class="list-inline-item">
@@ -54,10 +56,12 @@
 													<br>
 													<i class="fa fa-map"></i> <?= $inv->EventAddress ?>
 													<br>
-													<i class="fa fa-user"></i> <?= $inv->Name ?>
+													<a href="index.php?page=profile&id=<?= $inv->PersonID ?>">
+														<i class="fa fa-user"></i> <?= $inv->Name ?>
+													</a>
 												</li>
 											</ul>
-											<p class="pr-5"><?= $inv->Description ?></p>
+											<p class="pr-5"><?= substr($inv->Description, 0, 100) . "..." ?></p>
 										</div>
 									</div>
 								</div>

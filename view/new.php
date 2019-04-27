@@ -43,11 +43,10 @@
 						<div class="form-group">
 							<label for="category-one">Category One</label>
 							<select name="cat1" id="category-one" class="form-control w-100">
-								<option value="1">Select Category</option>
-								<option value="1">Laptop</option>
-								<option value="1">iPhone</option>
-								<option value="1">Monitor</option>
-								<option value="1">I need</option>
+								<option value="">Select Category</option>
+								<?php foreach ($categories as $cat) { ?>
+									<option value="<?= $cat->category ?>"><?= $cat->category ?></option>
+								<?php } ?>
 							</select>
 						</div>
 
@@ -55,11 +54,10 @@
 						<div class="form-group">
 							<label for="category-one">Category Two</label>
 							<select name="cat2" id="category-one" class="form-control w-100">
-								<option value="1">Select Category</option>
-								<option value="1">Laptop</option>
-								<option value="1">iPhone</option>
-								<option value="1">Monitor</option>
-								<option value="1">I need</option>
+								<option value="">Select Category</option>
+								<?php foreach ($categories as $cat) { ?>
+									<option value="<?= $cat->category ?>"><?= $cat->category ?></option>
+								<?php } ?>
 							</select>
 						</div>
 
@@ -67,11 +65,10 @@
 						<div class="form-group">
 							<label for="category-one">Category One</label>
 							<select name="cat3" id="category-one" class="form-control w-100">
-								<option value="1">Select Category</option>
-								<option value="1">Laptop</option>
-								<option value="1">iPhone</option>
-								<option value="1">Monitor</option>
-								<option value="1">I need</option>
+								<option value="">Select Category</option>
+								<?php foreach ($categories as $cat) { ?>
+									<option value="<?= $cat->category ?>"><?= $cat->category ?></option>
+								<?php } ?>
 							</select>
 						</div>
 

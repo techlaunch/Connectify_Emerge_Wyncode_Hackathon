@@ -9,7 +9,7 @@
 					<ul class="list-inline">
 						<li class="list-inline-item"><?= date("F j, Y", strtotime($invitation->DateTime)) ?></li>
 					</ul>
-					<img src="res/images/product/<?= $invitation->PictureName ?>" alt="article-01">
+					<img src="res/images/products/<?= $invitation->PictureName ?>" alt="article-01">
 					<p><?= $invitation->Description ?></p>
 				</article>
 				<div class="block comment">

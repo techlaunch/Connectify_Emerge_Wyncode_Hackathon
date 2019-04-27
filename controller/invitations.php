@@ -1,13 +1,16 @@
 <?php
 
 // include classes
-// include_once "model/users.php";
+include_once "model/general.php";
 
 class Invitations 
 {
 	public function index() {
 		// include the model
-//		$userModel = new Users();
+		$generalModel = new General();
+
+		// get top categories
+		$categories = $generalModel->getTopCategories();
 
 		// include the view
 		$title = "Contest";

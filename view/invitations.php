@@ -16,18 +16,14 @@
 					<div class="widget category-list">
 						<h4 class="widget-header">All Categories</h4>
 						<ul class="category-list">
-							<li><a href="category.html">Laptops <span>93</span></a></li>
-							<li><a href="category.html">Iphone <span>233</span></a></li>
-							<li><a href="category.html">Microsoft <span>183</span></a></li>
-							<li><a href="category.html">Monitors <span>343</span></a></li>
+							<?php foreach ($categories as $cat) { ?>
+								<li><a href="category.html"><?= $cat->category ?> <span><?= $cat->used ?></span></a></li>
+							<?php } ?>
 						</ul>
 					</div>
-
-
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-8">
-
 				<!-- ad listing list  -->
 				<div class="ad-listing-list mt-20">
 					<div class="row p-lg-3 p-sm-5 p-4">

@@ -5,6 +5,14 @@
 class General
 {
 	/**
+	 * Get the top categories
+	 */
+	public function getTopCategories($limit=10) {
+		global $db;
+		return $db->query("SELECT category, used FROM categories ORDER BY used DESC LIMIT $limit");
+	}
+
+	/**
 	 * Get the categories by initial letter
 	 */
 	public function getCategoriesByInitialLetter() {

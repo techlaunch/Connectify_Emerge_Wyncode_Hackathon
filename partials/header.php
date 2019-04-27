@@ -35,6 +35,9 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav">
 							<li class="nav-item">
+								<a class="nav-link text-white add-button" href="index.php?page=invitations&action=new">Invite</a>
+							</li>
+							<li class="nav-item">
 								<a class="nav-link" href="index.php?page=invitations">To Do</a>
 							</li>
 							<li class="nav-item">

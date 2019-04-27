@@ -9,29 +9,23 @@
 					<h2>Create an invitation</h2>
 					<p>Please create an invitation to be able to meet some neew friends</p>
 
-					<form action="#">
-						<!-- First Name -->
+					<form action="index.php?page=invitations&action=submit" method="post">
+						<!-- Name -->
 						<div class="form-group">
 							<label for="first-name">First Name</label>
-							<input type="text" class="form-control" id="first-name" placeholder="John">
-						</div>
-
-						<!-- Last Name -->
-						<div class="form-group">
-							<label for="last-name">Last Name</label>
-							<input type="text" class="form-control" id="last-name" placeholder="Doe">
+							<input type="text" class="form-control" name="name" id="name" placeholder="John">
 						</div>
 
 						<!-- File chooser -->
 						<div class="form-group">
 							<label for="input-file">Upload invitation image</label>
-							<input type="file" class="form-control-file mt-2 pt-1" id="input-file">
+							<input type="file" class="form-control-file mt-2 pt-1" name="picture" id="input-file">
 						</div>
 
 						<!-- Invitation Desc -->
 						<div class="form-group">
 							<label for="comunity-name">Describe your invitation</label>
-							<textarea type="text" class="form-control" id="comunity-name"></textarea>
+							<textarea type="text" class="form-control" name="desc" id="comunity-name"></textarea>
 						</div>
 
 						<!-- Zip Code -->
@@ -85,7 +79,7 @@
 
 						<!-- Submit button -->
 						<div class="form-group">
-							<button class="btn btn-transparent">Save My Changes</button>
+							<button type="submit" class="btn btn-transparent">Save My Changes</button>
 							<a href="#" class="btn btn-default">Go back</a>
 						</div>
 					</form>

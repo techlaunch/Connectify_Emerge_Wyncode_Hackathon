@@ -28,8 +28,11 @@ class Invitations
 	public function submit() {
 		// get params from the view
 		$name = $_POST['name'];
-		$age = $_POST['age'];
-		$accuracy = $_POST['accuracy'];
+		$picture = $_POST['picture'];
+		$desc = $_POST['desc'];
+//		$accuracy = $_POST['accuracy'];
+
+die($desc);
 
 		// redirect to the list of players
 		header('Location: index.php?page=invitations');

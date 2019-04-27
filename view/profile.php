@@ -1,8 +1,5 @@
 <?php include "partials/header.php"; ?>
 
-<!--==================================
-=            User Profile            =
-===================================-->
 <section class="dashboard section">
 	<!-- Container Start -->
 	<div class="container">
@@ -21,16 +18,11 @@
 						<p>Joined February 06, 2017</p>
 						<a href="#" class="btn btn-main-sm">Edit Profile</a>
 					</div>
+
 					<!-- Dashboard Links -->
 					<div class="widget user-dashboard-menu">
 						<p>TODO add the use description</p>
 					</div>
-
-
-				<!-- Modal -->
-				<!-- delete account popup modal end-->
-					<!-- delete-account modal -->
-
 				</div>
 			</div>
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">

@@ -9,7 +9,8 @@ class General
 	 */
 	public function getTopCategories($limit=10) {
 		global $db;
-		return $db->query("SELECT category, used FROM categories ORDER BY used DESC LIMIT $limit");
+		$categories = $db->query("SELECT category, used FROM categories ORDER BY used DESC LIMIT $limit");
+		return $categories;
 	}
 
 	/**
@@ -44,10 +45,18 @@ class General
 			OR A.Category2 LIKE '$category' 
 			OR A.Category3 LIKE '$category'
 			LIMIT 10");
-
 		return $invitations;
 	}
 
+	/**
+	 * Get a person based on the id
+	 */
+	public function getPersonByID($id) {
+		global $db;
+
+		$person = $db->query("SELECT * FROM person WHERE id=$id");
+		return $person;
+	}
 
 	// /**
 	//  * Get the list of Heat players

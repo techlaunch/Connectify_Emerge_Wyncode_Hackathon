@@ -7,7 +7,4 @@ class Comments
 	public $PersonID;
 	public $InviteID;
 	public $DateTime;
-	
 }
-	
-	

@@ -10,7 +10,5 @@ class Invites
 	public $PersonID;
 	public $Category1;
 	public $Category2;
-	public $Category3;
-	
-	
+	public $Category3;	
 }

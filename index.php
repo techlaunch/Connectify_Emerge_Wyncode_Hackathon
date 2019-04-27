@@ -32,7 +32,7 @@ if(file_exists("controller/$page.php"))
 		file_put_contents('logs/app_errors.log', $msg);
 		echo ("We found an error, please try again later");
 	}finally{
-		$db->disconnect();
+//		$db->disconnect();
 	}
 }
 else 

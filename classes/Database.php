@@ -6,7 +6,7 @@ class Database
 
 	public function connect() {
 		// connect to the database
-		$this->db = new mysqli('127.0.0.1', 'root', 'root', 'heats');
+		$this->db = new mysqli('127.0.0.1', 'root', '', 'connectify');
 
 		// check if no errors
 		if($this->db->connect_errno > 0) {

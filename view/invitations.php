@@ -2,14 +2,17 @@
 
 <section class="section-sm">
 	<div class="container">
+		<?php if($category != "%") { ?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="search-result bg-gray">
-					<h2>Results For "Electronics"</h2>
-					<p>123 Results on 12 December, 2017</p>
+					<h2>Results For "<?= $category ?>"</h2>
+					<p><?= count($invitations) ?> Results</p>
 				</div>
 			</div>
 		</div>
+		<?php } ?>
+
 		<div class="row">
 			<div class="col-lg-3 col-md-4">
 				<div class="category-sidebar">
@@ -17,165 +20,51 @@
 						<h4 class="widget-header">All Categories</h4>
 						<ul class="category-list">
 							<?php foreach ($categories as $cat) { ?>
-								<li><a href="category.html"><?= $cat->category ?> <span><?= $cat->used ?></span></a></li>
+								<li>
+									<a href="index.php?page=invitations&cat=<?= $cat->category ?>">
+										<?= substr($cat->category, 0, 15) ?> <span><?= $cat->used ?></span>
+									</a>
+								</li>
 							<?php } ?>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-8">
-				<!-- ad listing list  -->
-				<div class="ad-listing-list mt-20">
-					<div class="row p-lg-3 p-sm-5 p-4">
-						<div class="col-lg-4 align-self-center">
-							<a href="single.html">
-								<img src="res/images/products/products-1.jpg" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-6 col-md-10">
-									<div class="ad-listing-content">
-										<div>
-											<a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
+				<?php foreach($invitations as $inv) { ?>
+					<div class="ad-listing-list mt-20">
+						<div class="row p-lg-3 p-sm-5 p-4">
+							<div class="col-lg-4 align-self-center">
+								<a href="single.html">
+									<img src="res/images/products/products-1.jpg" class="img-fluid" alt="">
+								</a>
+							</div>
+							<div class="col-lg-8">
+								<div class="row">
+									<div class="col-lg-12 col-md-10">
+										<div class="ad-listing-content">
+											<ul class="list-inline mt-2 mb-3">
+												<li class="list-inline-item">
+													<a href="index.php?page=invitations&cat=<?= $inv->Category1 ?>">#<?= $inv->Category1 ?></a> &nbsp;&nbsp;
+													<a href="index.php?page=invitations&cat=<?= $inv->Category2 ?>">#<?= $inv->Category2 ?></a> &nbsp;&nbsp;
+													<a href="index.php?page=invitations&cat=<?= $inv->Category3 ?>">#<?= $inv->Category3 ?></a>
+												</li>
+												<li>
+													<i class="fa fa-calendar"></i> <?= date("F j, Y", strtotime($inv->DateTime)) ?>
+													<br>
+													<i class="fa fa-map"></i> <?= $inv->EventAddress ?>
+													<br>
+													<i class="fa fa-user"></i> <?= $inv->Name ?>
+												</li>
+											</ul>
+											<p class="pr-5"><?= $inv->Description ?></p>
 										</div>
-										<ul class="list-inline mt-2 mb-3">
-											<li class="list-inline-item"><a href="category.html"> <i
-														class="fa fa-folder-open-o"></i> Electronics</a></li>
-											<li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th
-													December</a></li>
-										</ul>
-										<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-											Explicabo, aliquam!</p>
 									</div>
-								</div>
-								<div class="col-lg-6 align-self-center">
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="ad-listing-list mt-20">
-					<div class="row p-lg-3 p-sm-5 p-4">
-						<div class="col-lg-4 align-self-center">
-							<a href="single.html">
-								<img src="res/images/products/products-2.jpg" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-6 col-md-10">
-									<div class="ad-listing-content">
-										<div>
-											<a href="single.html" class="font-weight-bold">Study Table Combo</a>
-										</div>
-										<ul class="list-inline mt-2 mb-3">
-											<li class="list-inline-item"><a href="category.html"> <i
-														class="fa fa-folder-open-o"></i> Electronics</a></li>
-											<li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th
-													December</a></li>
-										</ul>
-										<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-											Explicabo, aliquam!</p>
-									</div>
-								</div>
-								<div class="col-lg-6 align-self-center">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ad-listing-list mt-20">
-					<div class="row p-lg-3 p-sm-5 p-4">
-						<div class="col-lg-4 align-self-center">
-							<a href="single.html">
-								<img src="res/images/products/products-3.jpg" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-6 col-md-10">
-									<div class="ad-listing-content">
-										<div>
-											<a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
-										</div>
-										<ul class="list-inline mt-2 mb-3">
-											<li class="list-inline-item"><a href="category.html"> <i
-														class="fa fa-folder-open-o"></i> Electronics</a></li>
-											<li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th
-													December</a></li>
-										</ul>
-										<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-											Explicabo, aliquam!</p>
-									</div>
-								</div>
-								<div class="col-lg-6 align-self-center">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ad-listing-list mt-20">
-					<div class="row p-lg-3 p-sm-5 p-4">
-						<div class="col-lg-4 align-self-center">
-							<a href="single.html">
-								<img src="res/images/products/products-4.jpg" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-6 col-md-10">
-									<div class="ad-listing-content">
-										<div>
-											<a href="single.html" class="font-weight-bold">Study Table Combo</a>
-										</div>
-										<ul class="list-inline mt-2 mb-3">
-											<li class="list-inline-item"><a href="category.html"> <i
-														class="fa fa-folder-open-o"></i> Electronics</a></li>
-											<li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th
-													December</a></li>
-										</ul>
-										<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-											Explicabo, aliquam!</p>
-									</div>
-								</div>
-								<div class="col-lg-6 align-self-center">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ad-listing-list mt-20">
-					<div class="row p-lg-3 p-sm-5 p-4">
-						<div class="col-lg-4 align-self-center">
-							<a href="single.html">
-								<img src="res/images/products/products-1.jpg" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-6 col-md-10">
-									<div class="ad-listing-content">
-										<div>
-											<a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
-										</div>
-										<ul class="list-inline mt-2 mb-3">
-											<li class="list-inline-item"><a href="category.html"> <i
-														class="fa fa-folder-open-o"></i> Electronics</a></li>
-											<li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th
-													December</a></li>
-										</ul>
-										<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-											Explicabo, aliquam!</p>
-									</div>
-								</div>
-								<div class="col-lg-6 align-self-center">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ad listing list  -->
+				<?php } ?>
 			</div>
 		</div>
 	</div>

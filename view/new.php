@@ -31,12 +31,12 @@
 						<!-- Zip Code -->
 						<div class="form-group">
 							<label for="zip-code">Zip Code</label>
-							<input type="text" class="form-control" id="zip-code">
+							<input type="text" class="form-control" name="zip" id="zip-code">
 						</div>
 						<!-- date and time -->
 						<div class="form-group">
 							<label for="date">Date of invitation</label>
-							<input type="date" class="form-control" id="date">
+							<input type="date" class="form-control" name="date" id="date">
 						</div>
 
 						<!-- Cat 1 -->
@@ -53,8 +53,8 @@
 
 						<!-- Cat 2 -->
 						<div class="form-group">
-							<label for="category-one">Category One</label>
-							<select name="cat1" id="category-one" class="form-control w-100">
+							<label for="category-one">Category Two</label>
+							<select name="cat2" id="category-one" class="form-control w-100">
 								<option value="1">Select Category</option>
 								<option value="1">Laptop</option>
 								<option value="1">iPhone</option>
@@ -66,7 +66,7 @@
 						<!-- Cat 3 -->
 						<div class="form-group">
 							<label for="category-one">Category One</label>
-							<select name="cat1" id="category-one" class="form-control w-100">
+							<select name="cat3" id="category-one" class="form-control w-100">
 								<option value="1">Select Category</option>
 								<option value="1">Laptop</option>
 								<option value="1">iPhone</option>

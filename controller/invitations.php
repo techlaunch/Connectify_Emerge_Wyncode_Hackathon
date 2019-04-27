@@ -30,9 +30,14 @@ class Invitations
 		$name = $_POST['name'];
 		$picture = $_POST['picture'];
 		$desc = $_POST['desc'];
+		$zip = $_POST['zip'];
+		$date = $_POST['date'];
+		$cat1 = $_POST['cat1'];
+		$cat2 = $_POST['cat2'];
+		$cat3 = $_POST['cat3'];
 //		$accuracy = $_POST['accuracy'];
 
-die($desc);
+die($picture);
 
 		// redirect to the list of players
 		header('Location: index.php?page=invitations');

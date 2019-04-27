@@ -7,19 +7,19 @@
 				<!-- Edit Profile Welcome Text -->
 				<div class="widget welcome-message">
 					<h2>Create an invitation</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+					<p>Please create an invitation to be able to meet some neew friends</p>
 
 					<form action="#">
 						<!-- First Name -->
 						<div class="form-group">
 							<label for="first-name">First Name</label>
-							<input type="text" class="form-control" id="first-name">
+							<input type="text" class="form-control" id="first-name" placeholder="John">
 						</div>
 
 						<!-- Last Name -->
 						<div class="form-group">
 							<label for="last-name">Last Name</label>
-							<input type="text" class="form-control" id="last-name">
+							<input type="text" class="form-control" id="last-name" placeholder="Doe">
 						</div>
 
 						<!-- File chooser -->
@@ -28,9 +28,9 @@
 							<input type="file" class="form-control-file mt-2 pt-1" id="input-file">
 						</div>
 
-						<!-- Comunity Name -->
+						<!-- Invitation Desc -->
 						<div class="form-group">
-							<label for="comunity-name">Comunity Name</label>
+							<label for="comunity-name">Describe your invitation</label>
 							<textarea type="text" class="form-control" id="comunity-name"></textarea>
 						</div>
 
@@ -39,8 +39,37 @@
 							<label for="zip-code">Zip Code</label>
 							<input type="text" class="form-control" id="zip-code">
 						</div>
+						<!-- date and time -->
+						<div class="form-group">
+							<label for="date">Date of invitation</label>
+							<input type="date" class="form-control" id="date">
+						</div>
 
-						<!-- Zip Code -->
+						<!-- Cat 1 -->
+						<div class="form-group">
+							<label for="category-one">Category One</label>
+							<select name="cat1" id="category-one" class="form-control w-100">
+								<option value="1">Select Category</option>
+								<option value="1">Laptop</option>
+								<option value="1">iPhone</option>
+								<option value="1">Monitor</option>
+								<option value="1">I need</option>
+							</select>
+						</div>
+
+						<!-- Cat 2 -->
+						<div class="form-group">
+							<label for="category-one">Category One</label>
+							<select name="cat1" id="category-one" class="form-control w-100">
+								<option value="1">Select Category</option>
+								<option value="1">Laptop</option>
+								<option value="1">iPhone</option>
+								<option value="1">Monitor</option>
+								<option value="1">I need</option>
+							</select>
+						</div>
+
+						<!-- Cat 3 -->
 						<div class="form-group">
 							<label for="category-one">Category One</label>
 							<select name="cat1" id="category-one" class="form-control w-100">
